@@ -15,9 +15,6 @@ export function renderApp() {
 	} else if (path == "/signup") {
 		renderSignUpPage(app);
 	}
-	else if (path === "/") {
-		renderHomePage(app);
-	}
 	else if  (path ==="/game") {
 		const canvas = createGameCanvas();
 		app.appendChild(canvas);
@@ -25,5 +22,10 @@ export function renderApp() {
 	}
 	else if (path ==="/play"){
 		renderModes(app);
-		}
+	}
+	else if (path === "/" || path === "/home") {
+		renderHomePage(app);
+	}
+	else
+		renderHomePage(app);
 }
